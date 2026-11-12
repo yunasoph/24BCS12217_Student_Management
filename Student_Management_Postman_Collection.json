@@ -1,0 +1,125 @@
+{
+  "info": {
+    "name": "Student Management REST API",
+    "description": "Postman Collection for testing all Student Management endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Add a new student (POST /api/students)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alice Johnson\",\n  \"email\": \"alice.johnson@example.com\",\n  \"course\": \"Computer Science\",\n  \"age\": 21\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "students"]
+        }
+      }
+    },
+    {
+      "name": "2. Retrieve all students (GET /api/students)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "students"]
+        }
+      }
+    },
+    {
+      "name": "3. Retrieve student by ID (GET /api/students/{id})",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "students", "1"]
+        }
+      }
+    },
+    {
+      "name": "4. Update student details (PUT /api/students/{id})",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alice Johnson Updated\",\n  \"email\": \"alice.johnson@example.com\",\n  \"course\": \"Data Science\",\n  \"age\": 22\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "students", "1"]
+        }
+      }
+    },
+    {
+      "name": "5. Retrieve students by course (GET /api/students/course/{course})",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/course/Data Science",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "students", "course", "Data Science"]
+        }
+      }
+    },
+    {
+      "name": "6. Delete a student (DELETE /api/students/{id})",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "students", "1"]
+        }
+      }
+    },
+    {
+      "name": "7. Test Exception Handling - Student Not Found (GET /api/students/999)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "students", "999"]
+        }
+      }
+    }
+  ]
+}
