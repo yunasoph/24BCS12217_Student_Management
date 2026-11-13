@@ -35,27 +35,9 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
-## 4. Postman API Screenshots
+## 4. Testing with Postman
 
-All Postman screenshots demonstrating each endpoint and exception handling are saved in the `screenshots/` directory:
+A pre-configured Postman collection is included in the project:
+- `Student_Management_Postman_Collection.json`
 
-### 1. Add a New Student (`POST /api/students` - `201 Created`)
-![Add a new student](screenshots/1_POST_add_student_201.png)
-
-### 2. Retrieve All Students (`GET /api/students` - `200 OK`)
-![Retrieve all students](screenshots/2_GET_all_students_200.png)
-
-### 3. Retrieve Student by ID (`GET /api/students/{id}` - `200 OK`)
-![Retrieve student by ID](screenshots/3_GET_student_by_id_200.png)
-
-### 4. Update Student Details (`PUT /api/students/{id}` - `200 OK`)
-![Update student details](screenshots/4_PUT_update_student_200.png)
-
-### 5. Retrieve Students by Course (`GET /api/students/course/{course}` - `200 OK`)
-![Retrieve students by course](screenshots/5_GET_students_by_course_200.png)
-
-### 6. Delete a Student (`DELETE /api/students/{id}` - `200 OK`)
-![Delete a student](screenshots/6_DELETE_student_200.png)
-
-### 7. Exception Handling - Student Not Found (`GET /api/students/999` - `404 Not Found`)
-![Student Not Found Exception](screenshots/7_GET_student_not_found_404.png)
+Import this collection into Postman to test all REST API endpoints and exception handling scenarios.
